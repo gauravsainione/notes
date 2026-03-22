@@ -30,7 +30,7 @@ const Register = () => {
         <div className="hidden lg:block">
           <div className="glass-panel rounded-[2rem] p-8">
             <div className="mb-3 inline-flex rounded-full border border-primary-200 bg-primary-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-primary-700 dark:border-primary-900/60 dark:bg-primary-950/30 dark:text-primary-300">
-              Join StudySwap
+            Join NotesKart
             </div>
             <h1 className="brand-font text-5xl font-bold leading-tight text-slate-900 dark:text-white">
               Start buying, selling, and earning from study material.

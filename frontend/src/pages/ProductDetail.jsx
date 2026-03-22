@@ -112,7 +112,7 @@ const ProductDetail = () => {
     const shareUrl = `${window.location.origin}/product/${product._id}`;
     const shareData = {
       title: product.title,
-      text: `Check out this course on StudySwap: ${product.title}`,
+      text: `Check out this course on NotesKart: ${product.title}`,
       url: shareUrl
     };
 
@@ -327,7 +327,7 @@ const ProductDetail = () => {
           key: 'rzp_test_STZhAh0MVDvf41',
           amount: data.razorpayOrder.amount,
           currency: data.razorpayOrder.currency,
-          name: 'StudySwap',
+          name: 'NotesKart',
           description: `Purchase of ${product.title}`,
           order_id: data.razorpayOrder.id,
           handler: async function (response) {

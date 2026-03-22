@@ -20,7 +20,7 @@ const Navbar = () => {
                   <BookOpen className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
                 <div>
-                  <div className="brand-font text-xl font-bold leading-none sm:text-2xl">StudySwap</div>
+                  <div className="brand-font text-xl font-bold leading-none sm:text-2xl">NotesKart</div>
                   <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500 sm:text-[11px] sm:tracking-[0.22em]">Campus Marketplace</div>
                 </div>
               </Link>

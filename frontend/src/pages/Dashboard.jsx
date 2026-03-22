@@ -1582,7 +1582,7 @@ const Dashboard = () => {
               <textarea placeholder="Describe the condition, contents, and value..." required value={newProduct.description} onChange={e=>setNewProduct({...newProduct, description: e.target.value})} rows="4" className="w-full px-4 py-3 border border-gray-300 rounded-xl dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none" />
             </div>
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 mb-4 font-medium">* Note: Submitting a listing places it into a pending state. An Administrator will review it before it appears publicly on StudySwap.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 mb-4 font-medium">* Note: Submitting a listing places it into a pending state. An Administrator will review it before it appears publicly on NotesKart.</p>
           <button type="submit" className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3.5 rounded-xl font-bold text-lg shadow-md hover:shadow-lg transition-all focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800">Submit Listing for Review</button>
         </form>
       )}

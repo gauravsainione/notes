@@ -12,12 +12,12 @@ const Footer = () => {
                 <BookOpen className="h-5 w-5" />
               </div>
               <div>
-                <div className="brand-font text-2xl font-bold">StudySwap</div>
+                <div className="brand-font text-2xl font-bold">NotesKart</div>
                 <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">Built for students</div>
               </div>
             </div>
             <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              StudySwap makes campus commerce feel modern: discover affordable notes, browse local books, and unlock digital material from fellow students in a cleaner, more trustworthy marketplace.
+              NotesKart makes campus commerce feel modern: discover affordable notes, browse local books, and unlock digital material from fellow students in a cleaner, more trustworthy marketplace.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-200/70 px-6 py-4 text-center text-xs font-semibold text-slate-500 dark:border-slate-800/70 dark:text-slate-400 sm:px-10">
           <span className="inline-flex items-center gap-1">
-            Â© {new Date().getFullYear()} StudySwap. Made with <Heart className="h-3 w-3 fill-rose-400 text-rose-400" /> for students.
+            © {new Date().getFullYear()} NotesKart. Made with <Heart className="h-3 w-3 fill-rose-400 text-rose-400" /> for students.
           </span>
         </div>
       </div>
@@ -61,3 +61,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
