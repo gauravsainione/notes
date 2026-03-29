@@ -52,7 +52,7 @@ const NoteViewer = () => {
 
   // Build the secure PDF URL with auth token
   const token = localStorage.getItem('token');
-  const pdfUrl = `http://localhost:5000/api/orders/${orderId}/view?token=${token}`;
+  const pdfUrl = `/api/orders/${orderId}/view?token=${token}`;
 
   if (loading) return <div className="p-16 text-center text-xl font-medium text-gray-500 animate-pulse">Loading viewer...</div>;
   if (error) return <div className="p-16 text-center text-xl font-medium text-red-500">{error}</div>;

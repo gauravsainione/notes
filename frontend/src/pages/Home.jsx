@@ -232,10 +232,10 @@ const Home = () => {
               <Link to={`/product/${product._id}`} key={product._id} className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-700 group flex flex-col h-full">
                 <div className="h-52 sm:h-56 bg-gray-50 dark:bg-gray-700 relative flex items-center justify-center border-b border-gray-100 dark:border-gray-700 overflow-hidden">
                   {product.images?.[0] ? (
-                    <img src={product.images[0]?.startsWith('/') ? `http://localhost:5000${product.images[0]}` : product.images[0]} alt={product.title} className="h-full w-full object-contain p-2 transition-transform duration-300 group-hover:scale-105 sm:object-cover sm:p-0" />
+                    <img src={product.images[0]?.startsWith('/') ? product.images[0] : product.images[0]} alt={product.title} className="h-full w-full object-contain p-2 transition-transform duration-300 group-hover:scale-105 sm:object-cover sm:p-0" />
                   ) : product.thumbnailUrl ? (
                     <PdfThumbnail
-                      src={`http://localhost:5000${product.thumbnailUrl}`}
+                      src={product.thumbnailUrl}
                       title={product.title}
                       className="pointer-events-none"
                       pageClassName="scale-100 origin-top sm:scale-[1.08]"

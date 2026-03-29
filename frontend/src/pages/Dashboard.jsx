@@ -573,7 +573,7 @@ const Dashboard = () => {
                     <td className="px-6 py-4"><input type="text" className="w-24 border rounded px-2 py-1 text-sm dark:bg-gray-800 dark:text-white" value={editProductData.category} onChange={e => setEditProductData({...editProductData, category: e.target.value})} /></td>
                     <td className="px-6 py-4">
                       {p.type === 'digital' && p.fileUrl ? (
-                        <a href={`http://localhost:5000${p.fileUrl}`} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
+                        <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
                       ) : (
                         <span className="text-gray-400 text-sm italic">N/A</span>
                       )}
@@ -594,7 +594,7 @@ const Dashboard = () => {
                     </td>
                     <td className="px-6 py-4">
                       {p.type === 'digital' && p.fileUrl ? (
-                        <a href={`http://localhost:5000${p.fileUrl}`} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
+                        <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
                       ) : (
                         <span className="text-gray-400 text-sm italic">N/A</span>
                       )}
@@ -847,7 +847,7 @@ const Dashboard = () => {
                   <td className="px-6 py-4 text-gray-500 dark:text-gray-400 font-medium text-xs">{p.seller?.email || 'N/A'}</td>
                   <td className="px-6 py-4">
                     {p.isDeleted ? <span className="px-2 py-1 text-xs font-bold rounded-md bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Deleted</span> : p.type === 'digital' && p.fileUrl ? (
-                      <a href={`http://localhost:5000${p.fileUrl}`} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
+                      <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">View PDF</a>
                     ) : (
                       <span className="text-gray-400 text-sm italic">N/A</span>
                     )}
@@ -1084,13 +1084,13 @@ const Dashboard = () => {
               <div className="h-52 sm:h-56 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center overflow-hidden">
                 {product.images?.[0] ? (
                   <img
-                    src={product.images[0]?.startsWith('/') ? `http://localhost:5000${product.images[0]}` : product.images[0]}
+                    src={product.images[0]?.startsWith('/') ? product.images[0] : product.images[0]}
                     alt={product.title}
                     className="h-full w-full object-contain p-2 sm:object-cover sm:p-0"
                   />
                 ) : product.thumbnailUrl ? (
                   <PdfThumbnail
-                    src={`http://localhost:5000${product.thumbnailUrl}`}
+                    src={product.thumbnailUrl}
                     title={product.title}
                     className="pointer-events-none"
                     pageClassName="scale-100 origin-top sm:scale-[1.08]"
@@ -1633,7 +1633,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4">
                           {l.type === 'digital' ? (
                             <div className="flex flex-col gap-2">
-                              {l.fileUrl && <a href={`http://localhost:5000${l.fileUrl}`} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-xs">📄 Current PDF</a>}
+                              {l.fileUrl && <a href={l.fileUrl} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-xs">📄 Current PDF</a>}
                               <label className="cursor-pointer text-xs font-bold text-blue-600 hover:text-blue-800">
                                 📎 Replace PDF
                                 <input type="file" accept=".pdf" className="hidden" onChange={async (e) => {
@@ -1721,7 +1721,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 dark:text-gray-300 font-bold text-lg">₹{l.price}</td>
                         <td className="px-6 py-4">
                           {l.type === 'digital' && l.fileUrl ? (
-                            <a href={`http://localhost:5000${l.fileUrl}`} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">📄 View PDF</a>
+                            <a href={l.fileUrl} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 hover:underline font-bold text-sm">📄 View PDF</a>
                           ) : l.type === 'physical' && l.images && l.images.length > 0 ? (
                             <span className="text-gray-500 text-sm font-medium">📸 {l.images.length} image(s)</span>
                           ) : (

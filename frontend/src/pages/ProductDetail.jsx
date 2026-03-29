@@ -324,7 +324,7 @@ const ProductDetail = () => {
         }
 
         const options = {
-          key: 'rzp_test_STZhAh0MVDvf41',
+          key: data.razorpayKeyId,
           amount: data.razorpayOrder.amount,
           currency: data.razorpayOrder.currency,
           name: 'NotesKart',
@@ -391,11 +391,11 @@ const ProductDetail = () => {
           <div className="bg-gray-50 dark:bg-gray-900/50 p-4 sm:p-8 flex flex-col items-center justify-center min-h-[250px] sm:min-h-[400px] border-b md:border-b-0 md:border-r border-gray-100 dark:border-gray-700 relative">
             <div className="w-full text-center text-gray-400 mb-6">
               {product.images?.[0] ? (
-                <img src={product.images[0]?.startsWith('/') ? `http://localhost:5000${product.images[0]}` : product.images[0]} alt="Product" className="max-h-96 w-full mx-auto rounded-xl shadow-md object-cover" />
+                <img src={product.images[0]?.startsWith('/') ? product.images[0] : product.images[0]} alt="Product" className="max-h-96 w-full mx-auto rounded-xl shadow-md object-cover" />
               ) : product.thumbnailUrl ? (
                 <div className="w-full overflow-hidden rounded-xl shadow-md">
                   <PdfThumbnail
-                    src={`http://localhost:5000${product.thumbnailUrl}`}
+                    src={product.thumbnailUrl}
                     title={product.title}
                     className="min-h-[320px] bg-white dark:bg-gray-900"
                     pageClassName="scale-[1.02] origin-top"
@@ -838,7 +838,7 @@ const ProductDetail = () => {
             </div>
             <div className="flex-1 overflow-y-auto select-none bg-gray-100 p-3 dark:bg-gray-900 sm:p-4 md:p-8" style={{ minHeight: '60vh' }}>
               <Document
-                file={`http://localhost:5000${product.previewUrl}`}
+                file={product.previewUrl}
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={<div className="text-center text-gray-400 my-10 font-medium">Loading demo securely...</div>}
                 error={<div className="text-center text-red-400 my-10 font-medium">Failed to load demo.</div>}

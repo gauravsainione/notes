@@ -82,6 +82,7 @@ const checkout = async (req, res) => {
     res.status(200).json({
       success: true,
       razorpayOrder,
+      razorpayKeyId: process.env.RAZORPAY_KEY_ID,
       orderId: order._id,
       amount: product.price
     });

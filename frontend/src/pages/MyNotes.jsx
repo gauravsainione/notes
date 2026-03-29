@@ -142,7 +142,7 @@ const MyNotes = () => {
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900">
                   {order.product?.thumbnailUrl ? (
                     <PdfThumbnail
-                      src={`http://localhost:5000${order.product.thumbnailUrl}`}
+                      src={`${order.product.thumbnailUrl}`}
                       title={order.product?.title}
                       className="h-full w-full bg-white dark:bg-gray-900"
                     />
